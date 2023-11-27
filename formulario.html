@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulario de Tarjeta</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 20px;
-            }
-    
-            label {
-                display: block;
-                margin-bottom: 8px;
-            }
-    
-            input {
-                width: 75%; /* Ajustar el ancho según sea necesario */
-                padding: 8px;
-                margin-bottom: 16px;
-                box-sizing: border-box;
-            }
-    
-            .inline {
-                display: flex;
-                gap: 8px;
-            }
-    
-            /* Nuevo estilo para el contenedor de nombre y apellidos */
-            .nombre-apellidos-container {
-                display: flex;
-                gap: 5px;
-                width: 100%;
-                justify-content: left; /* Centrar los elementos horizontalmente */
-            }
-    
-            /* Ajuste del ancho de los campos de nombre y apellidos */
-            #nombre,
-            #apellidos {
-                width: calc(100% - 15px);
-            }
-        </style>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Tarjeta</title>
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 75%; /* Ajustar el ancho según sea necesario */
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .inline {
+            display: flex;
+            gap: 8px;
+        }
+
+        /* Nuevo estilo para el contenedor de nombre y apellidos */
+        .nombre-apellidos-container {
+            display: flex;
+            gap: 5px;
+            width: 100%;
+            justify-content: left; /* Centrar los elementos horizontalmente */
+        }
+
+        /* Ajuste del ancho de los campos de nombre y apellidos */
+        #nombre,
+        #apellidos {
+            width: calc(100% - 15px);
+        }
+        /* Estilos para el botón de PAGAR */
+        #pagarButton {
+            width: 50%; /* Ajuste del ancho a la mitad de la pantalla */
+            padding: 12px;
+            font-size: 16px;
+            background-color: #4CAF50; /* Color de fondo verde */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilos para cambiar el color del botón al pasar el ratón sobre él */
+        #pagarButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
 <body>
     <!-- Encabezado para la sección de Información de la tarjeta -->
     <h2>Información de la tarjeta</h2>
