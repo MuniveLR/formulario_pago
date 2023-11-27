@@ -85,5 +85,44 @@
     <!-- Campo para el apartamento, suite, edificio -->
     <input type="text" id="apartamento" name="apartamento" placeholder="Apartamento, suite, edificio">
 
+    <!-- Script JavaScript para realizar validaciones y mostrar mensajes -->
+    <script>
+        function realizarPago() {
+            // Obtener valores de los campos
+            var numeroTarjeta = document.getElementById("numeroTarjeta").value;
+            var vencimiento = document.getElementById("vencimiento").value;
+            var codigoSeguridad = document.getElementById("codigoSeguridad").value;
+            var nombre = document.getElementById("nombre").value;
+            var apellidos = document.getElementById("apellidos").value;
+            var domicilio = document.getElementById("domicilio").value;
+
+            // Realizar validaciones
+            if (!/^\d{16}$/.test(numeroTarjeta)) {
+                alert("Número de tarjeta no válido. Debe contener 16 dígitos numéricos.");
+                return;
+            }
+
+            // Validar formato de fecha de vencimiento (MM/AA)
+            if (!/^\d{2}\/\d{2}$/.test(vencimiento)) {
+                alert("Formato de fecha de vencimiento no válido. Debe ser MM/AA.");
+                return;
+            }
+
+            // Validar código de seguridad (3 dígitos)
+            if (!/^\d{3}$/.test(codigoSeguridad)) {
+                alert("Código de seguridad no válido. Debe contener 3 dígitos numéricos.");
+                return;
+            }
+
+            // Validar que todos los campos obligatorios estén completos
+            if (nombre === "" || apellidos === "" || domicilio === "") {
+                alert("Todos los campos obligatorios deben estar completos.");
+                return;
+            }
+
+            // Si todas las validaciones pasan, mostrar mensaje de éxito
+            alert("Pago exitoso");
+        }
+    </script>
 </body>
 </html>
