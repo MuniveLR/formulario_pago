@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Tarjeta</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+    
+            label {
+                display: block;
+                margin-bottom: 8px;
+            }
+    
+            input {
+                width: 75%; /* Ajustar el ancho según sea necesario */
+                padding: 8px;
+                margin-bottom: 16px;
+                box-sizing: border-box;
+            }
+    
+            .inline {
+                display: flex;
+                gap: 8px;
+            }
+    
+            /* Nuevo estilo para el contenedor de nombre y apellidos */
+            .nombre-apellidos-container {
+                display: flex;
+                gap: 5px;
+                width: 100%;
+                justify-content: left; /* Centrar los elementos horizontalmente */
+            }
+    
+            /* Ajuste del ancho de los campos de nombre y apellidos */
+            #nombre,
+            #apellidos {
+                width: calc(100% - 15px);
+            }
+        </style>
+    </head>
+<body>
+    <!-- Encabezado para la sección de Información de la tarjeta -->
+    <h2>Información de la tarjeta</h2>
+
+    <!-- Campo para el número de tarjeta -->
+    <label for="numeroTarjeta">Número de tarjeta:</label>
+    <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Ingrese el número de tarjeta" required>
+
+    <!-- Sección en línea para el vencimiento y el código de seguridad -->
+    <div class="inline">
+        <div>
+            <!-- Campo para la fecha de vencimiento -->
+            <label for="vencimiento">Vencimiento:</label>
+            <input type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" required>
+        </div>
+        <div>
+            <!-- Campo para el código de seguridad -->
+            <label for="codigoSeguridad">Código de seguridad:</label>
+            <input type="text" id="codigoSeguridad" name="codigoSeguridad" placeholder="CVV" required>
+        </div>
+    </div>
+
+    <!-- Encabezado para la sección de Dirección de la tarjeta -->
+    <h2>Dirección de la tarjeta</h2>
+
+    <!-- Sección en línea para el nombre y apellidos dentro del nuevo contenedor -->
+    <div class="nombre-apellidos-container">
+        <div>
+            <!-- Campo para el nombre -->
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre(s)" required>
+        </div>
+        <div>
+            <!-- Campo para los apellidos -->
+            <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+        </div>
+    </div>
+
+    <!-- Campo para el domicilio -->
+    <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+
+    <!-- Campo para el apartamento, suite, edificio -->
+    <input type="text" id="apartamento" name="apartamento" placeholder="Apartamento, suite, edificio">
+
+</body>
+</html>
